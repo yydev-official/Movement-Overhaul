@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "movement-overhaul",
+	"version": "${version}",
+	"name": "Movement Overhaul",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/movement-overhaul/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.ashleyslazys.movementoverhaul.MovementOverhaul"
+		],
+		"fabric-datagen": [
+			"com.ashleyslazys.movementoverhaul.MovementOverhaulDataGenerator"
+		]
+	},
+	"mixins": [
+		"movement-overhaul.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

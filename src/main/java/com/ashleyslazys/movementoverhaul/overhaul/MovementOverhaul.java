@@ -1,4 +1,4 @@
-package com.ashleyslazys.movementoverhaul;
+package com.ashleyslazys.movementoverhaul.overhaul;
 
 import net.fabricmc.api.ModInitializer;
 

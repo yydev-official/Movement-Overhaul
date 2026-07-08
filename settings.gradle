@@ -10,4 +10,4 @@ pluginManagement {
 }
 
 // Should match your modid
-rootProject.name = 'movement-overhaul'
+rootProject.name = 'template-mod'

@@ -1,24 +1,18 @@
 package com.ashleyslazys.movementoverhaul.overhaul;
 
-import com.mojang.authlib.minecraft.client.MinecraftClient;
 import net.fabricmc.api.ClientModInitializer;
-import net.minecraft.resources.Identifier;
-
-import org.spongepowered.asm.mixin.Mixin;
 
 import com.ashleyslazys.movementoverhaul.Config;
 
-@Mixin(MinecraftClient.class)
 public class MovementOverhaulClient implements ClientModInitializer {
 
     /*
-    TODO:
-     - add sliding
-     - double jumping
-     - lendge holding
-     - wall climbing
-     - wall jumping
-     -  wall running
+        TODO:
+         - double jumping
+         - ledge holding
+         - wall climbing
+         - wall jumping
+         - wall running
     */
     @Override
     public void onInitializeClient() {
@@ -27,10 +21,5 @@ public class MovementOverhaulClient implements ClientModInitializer {
         // Proceed with mild caution.
 
         Config.LOGGER.info("Hello Fabric client world!");
-    }
-
-
-    public static Identifier id(String path) {
-        return Identifier.fromNamespaceAndPath(Config.MOD_ID, path);
     }
 }

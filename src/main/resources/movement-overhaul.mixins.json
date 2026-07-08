@@ -3,7 +3,7 @@
 	"package": "com.ashleyslazys.movementoverhaul.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"LocalPlayerEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

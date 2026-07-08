@@ -1,4 +1,4 @@
-# Template Mod
+# Movement Overhaul
 
 ## Setup
 

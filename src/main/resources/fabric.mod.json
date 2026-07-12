@@ -5,11 +5,11 @@
 	"name": "Movement Overhaul",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"twlve"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/yydev-official/Movement-Overhaul"
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/movement-overhaul/icon.png",
@@ -18,8 +18,8 @@
 		"main": [
 			"com.ashleyslazys.movementoverhaul.overhaul.MovementOverhaul"
 		],
-		"fabric-datagen": [
-			"com.ashleyslazys.movementoverhaul.MovementOverhaulDataGenerator"
+		"server": [
+			"com.ashleyslazys.movementoverhaul.overhaul.MovementOverhaulServer"
 		],
 		"client": [
 			"com.ashleyslazys.movementoverhaul.overhaul.MovementOverhaulClient"
@@ -30,8 +30,8 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
-		"minecraft": "~1.21.11",
-		"java": ">=21",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
 		"fabric-api": "*"
 	}
 }

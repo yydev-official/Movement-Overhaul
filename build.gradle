@@ -15,12 +15,9 @@ repositories {
 }
 
 loom {
-	splitEnvironmentSourceSets()
-
 	mods {
-		"template-mod" {
+		"movement-overhaul" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
 		}
 	}
 }

@@ -12,18 +12,18 @@ public class MovementPackets {
     public static final CustomPacketPayload.Type<MovementStatePayload> MOVEMENT_STATE_TYPE =
             new CustomPacketPayload.Type<>(Identifier.fromNamespaceAndPath(Config.MOD_ID, "movement_state"));
 
-    public record MovementStatePayload(boolean isSliding, boolean isBHopping) implements CustomPacketPayload {
+    public record MovementStatePayload(boolean isSliding, boolean isDoubleJump) implements CustomPacketPayload {
         public static final StreamCodec<FriendlyByteBuf, MovementStatePayload> CODEC = CustomPacketPayload.codec(
                 MovementStatePayload::write, MovementStatePayload::new
         );
 
-        private MovementStatePayload(FriendlyByteBuf Buffer) {
-            this(Buffer.readBoolean(), Buffer.readBoolean());
+        private MovementStatePayload(FriendlyByteBuf buffer) {
+            this(buffer.readBoolean(), buffer.readBoolean());
         }
 
-        private void write(FriendlyByteBuf Buffer) {
-            Buffer.writeBoolean(isSliding);
-            Buffer.writeBoolean(isBHopping);
+        private void write(FriendlyByteBuf buffer) {
+            buffer.writeBoolean(isSliding);
+            buffer.writeBoolean(isDoubleJump);
         }
 
         @Override
@@ -33,7 +33,8 @@ public class MovementPackets {
     }
 
     public static void registerPayloads() {
-        PayloadTypeRegistry.playC2S().register(
+        // In Fabric API 26.1, playC2S() was renamed to serverboundPlay()
+        PayloadTypeRegistry.serverboundPlay().register(
                 MOVEMENT_STATE_TYPE,
                 MovementStatePayload.CODEC
         );
